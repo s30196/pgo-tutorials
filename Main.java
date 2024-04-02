@@ -1,19 +1,15 @@
-import java.util.Scanner;
-public class  Main {
+public class Main {
+    public static void main(String[] args) {
 
-    public static void main(String [] args) {
+        Student s1 = new Student("Andrew", "Koluszko", "s10000", "s10000@pjwstk.edu.pl", "Koszykowa 56");
+        s1.addGrade(4);
+        s1.addGrade(4.5);
 
-        Scanner a = new Scanner(System.in);
 
-        int b = a.nextInt();
+        StudentGroup g1 = new StudentGroup("14c");
+        g1.add(s1);
 
-        if (b>0) {
-            System.out.println("Positive");
-        }else if (b<0) {
-            System.out.println("NEGATIVE");
-        }else {
-            System.out.println("Zero");
-        }
+
+        System.out.println(s1.toString());
     }
-
 }
